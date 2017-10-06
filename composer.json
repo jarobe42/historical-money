@@ -1,5 +1,5 @@
 {
-  "name": "jarobe42/historical-money-converter",
+  "name": "jarobe42/historical-money",
   "description": "A library for converting money historically",
   "keywords": ["money", "vo", "value object"],
   "license": "MIT",
@@ -11,7 +11,8 @@
   ],
   "require": {
     "php": ">=5.5",
-    "moneyphp/money": "^3.0.1"
+    "moneyphp/money": "^3.0.1",
+    "florianv/swap": "^3.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.5",
@@ -34,13 +35,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Money\\": "src/"
+      "Jarobe\\HistoricalMoney\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\Money\\": "tests/",
-      "spec\\Money\\": "spec/"
+      "Tests\\Jarobe\\HistoricalMoney\\": "tests/",
+      "spec\\Jarobe\\HistoricalMoney\\": "spec/"
     }
   },
   "scripts": {

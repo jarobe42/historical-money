@@ -1,0 +1,7 @@
+suites:
+formatter.name: pretty
+extensions:
+    - PhpSpec\Extension\CodeCoverageExtension
+code_coverage:
+    format: clover
+    output: build/spec_coverage.xml
