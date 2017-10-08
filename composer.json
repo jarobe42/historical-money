@@ -1,0 +1,57 @@
+{
+  "name": "jarobe42/historical-money",
+  "description": "A library for converting money historically",
+  "keywords": ["money", "vo", "value object"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jim Robertson",
+      "email": "jim@jarobe.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "moneyphp/money": "^3.0.1",
+    "florianv/swap": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.5",
+    "ext-bcmath": "*",
+    "ext-gmp": "*",
+    "ext-intl": "*",
+    "psr/cache": "^1.0",
+    "cache/taggable-cache": "^0.4.0",
+    "phpspec/phpspec": "^2.5",
+    "henrikbjorn/phpspec-code-coverage": "^2.0.2",
+    "sllh/php-cs-fixer-styleci-bridge": "^2.1",
+    "php-http/message": "^1.4",
+    "php-http/mock-client": "^0.3.3"
+  },
+  "suggest": {
+    "ext-bcmath": "Calculate without integer limits",
+    "ext-gmp": "Calculate without integer limits",
+    "ext-intl": "Format Money objects with intl",
+    "psr/cache-implementation": "Used for Currency caching"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jarobe\\HistoricalMoney\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Jarobe\\HistoricalMoney\\": "tests/",
+      "spec\\Jarobe\\HistoricalMoney\\": "spec/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpspec run",
+      "vendor/bin/phpunit"
+    ],
+    "test-ci": [
+      "vendor/bin/phpspec run -c phpspec.ci.yml",
+      "vendor/bin/phpunit --coverage-text --coverage-clover=build/unit_coverage.xml"
+    ]
+  }
+}
