@@ -11,14 +11,14 @@
   ],
   "require": {
     "php": ">=5.5",
-    "moneyphp/money": "^3.0.1",
-    "florianv/swap": "^3.0"
+    "moneyphp/money": "^3.0.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.5",
     "ext-bcmath": "*",
     "ext-gmp": "*",
     "ext-intl": "*",
+    "florianv/swap": "^3.0",
     "psr/cache": "^1.0",
     "cache/taggable-cache": "^0.4.0",
     "phpspec/phpspec": "^2.5",
@@ -31,6 +31,7 @@
     "ext-bcmath": "Calculate without integer limits",
     "ext-gmp": "Calculate without integer limits",
     "ext-intl": "Format Money objects with intl",
+    "florianv/swap": "Exchange rates library for PHP",
     "psr/cache-implementation": "Used for Currency caching"
   },
   "autoload": {
